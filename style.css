@@ -1,0 +1,247 @@
+/* General Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  body {
+    background-color: #000;
+    color: #333;
+    padding: 20px;
+  }
+  
+  /* Dark Theme */
+  body.dark-theme {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+  
+  /* Header */
+  header {
+    background: linear-gradient(45deg, #007bff, #00d4ff);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+  }
+  
+  header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  header nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Dark Theme Header */
+  body.dark-theme header {
+    background: linear-gradient(45deg, #0055a5, #00a5e0);
+  }
+  
+  /* Main Content Styling */
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Sections */
+  section {
+    background-color: transparent;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Hide sections initially */
+.content-section {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+  /* Dark Theme for Sections */
+  body.dark-theme section {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    box-shadow: none;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    color: #007bff;
+  }
+  
+  /* Dark Theme H2 */
+  body.dark-theme h2 {
+    color: #00d4ff;
+  }
+  
+  /* Claim Submission Form */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form input, form textarea, form button {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  form input:focus, form textarea:focus {
+    border-color: #007bff;
+  }
+  
+  form button {
+    background: linear-gradient(45deg, #007bff, #00d4ff);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  
+  form button:hover {
+    background: linear-gradient(45deg, #005bb5, #00a4d4);
+  }
+  
+  /* Dark Theme Button */
+  body.dark-theme form button {
+    background: linear-gradient(45deg, #0055a5, #00a5e0);
+  }
+  
+  #successMessage {
+    color: green;
+    font-weight: bold;
+  }
+  
+  /* Claims Table */
+  #claimsTable {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  #claimsTable th, #claimsTable td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  #claimsTable th {
+    background: linear-gradient(45deg, #007bff, #00d4ff);
+    color: white;
+    border: none;
+  }
+  
+  #claimsTable td {
+    background-color: #f9f9f9;
+  }
+  
+  body.dark-theme #claimsTable th {
+    background: linear-gradient(45deg, #0055a5, #00a5e0);
+  }
+  
+  body.dark-theme #claimsTable td {
+    background-color: #2c2c2c;
+  }
+  
+  /* Chatbot Section */
+  #chatbotContainer {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #007bff, #00d4ff);
+    border-radius: 10px;
+  }
+  
+  #chatbot iframe {
+    border-radius: 10px;
+  }
+  
+  body.dark-theme #chatbotContainer {
+    background: linear-gradient(135deg, #0055a5, #00a5e0);
+  }
+  
+  /* Knowledge Base Search */
+  #searchBar {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  #searchResults li {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  body.dark-theme #searchResults li {
+    background-color: #2c2c2c;
+  }
+  
+  #searchResults li:hover {
+    background-color: #eef;
+  }
+  
+  /* Dark Theme Search */
+  body.dark-theme #searchBar {
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+    border-color: #555;
+  }
+  
+  body.dark-theme #searchResults li:hover {
+    background-color: #444;
+  }
+  
+  /* Dark Mode Toggle Button */
+  #themeToggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(45deg, #007bff, #00d4ff);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  #themeToggle:hover {
+    background: linear-gradient(45deg, #0055a5, #00a5e0);
+  }
+  
+  body.dark-theme #themeToggle {
+    background: linear-gradient(45deg, #0055a5, #00a5e0);
+  }
+  
